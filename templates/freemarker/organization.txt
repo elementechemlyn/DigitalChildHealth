@@ -1,0 +1,19 @@
+    {
+      "fullUrl": "${ fullUrl }",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "${ id }",
+        "meta": {
+          "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/CareConnect-DCH-Organization-1"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "${ identifer.value }"
+          }
+        ],
+        "name": "${ name }"
+      }
+    },

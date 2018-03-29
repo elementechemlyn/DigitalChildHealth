@@ -1,0 +1,32 @@
+    {
+      "fullUrl": "${ fullUrl }",
+      "resource": {
+        "resourceType": "Location",
+        "id": "${ id }",
+        "meta": {
+          "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/CareConnect-DCH-Location-1"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "${ identifer.system }",
+            "value": "${ identifer.value }"
+          }
+        ],
+        "name": "${ name }",
+        "type": {
+          "coding": [
+            {
+              "system": "${ type.coding.system }",
+              "code": "${ type.coding.code }",
+              "display": "${ type.coding.display }"
+            }
+          ]
+        },
+        "managingOrganization": {
+          "reference": "${ manorg.reference }",
+          "display": "${ manorg.display }"
+        }
+      }
+    }

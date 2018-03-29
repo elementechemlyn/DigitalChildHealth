@@ -1,0 +1,47 @@
+    {
+      "fullUrl": "${ fullUrl }",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "${ id }",
+        "meta": {
+          "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/CareConnect-DCH-Practitioner-1"
+          ]
+        },
+        "identifier": [
+			  {% for identifier in identifiers %}
+          {
+            "system": "${ identifer.system }",
+            "value": "${ identifer.value }"
+          }
+		    {% endfor %}
+        ],
+        "name": {
+          "family": [
+            "${ name.family }"
+          ],
+          "given": [
+			    {% for given in name.givens %}
+            "${ given }"
+			    {% endfor %}
+          ]
+        },
+        "practitionerRole": [
+          {
+            "managingOrganization": {
+              "reference": "${ role.org.reference }",
+              "display": "${ role.org.display }"
+            },
+            "role": {
+              "coding": [
+                {
+                  "system": "https://fhir.hl7.org.uk/CareConnect-SDSJobRoleName-1",
+                  "code": "${ role.coding.code }",
+                  "display": "${ role.coding.display }"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }

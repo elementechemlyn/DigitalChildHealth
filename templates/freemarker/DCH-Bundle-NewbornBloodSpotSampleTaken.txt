@@ -1,0 +1,20 @@
+{
+  "resourceType": "Bundle",
+  "id": "${ id }",
+  "meta": {
+    "profile": [
+      "https://fhir.nhs.uk/StructureDefinition/DCH-Bundle-1"
+    ]
+  },
+  "type": "message",
+  "entry": [
+    ${ MessageHeader },
+    ${ Organization },
+    ${ HealthCareService },
+    ${ Patient },
+    ${ Encounter },
+    ${ ProcedureRequest },
+    ${ Practitioner },
+    ${ Location }
+  ]
+}

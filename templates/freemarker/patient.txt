@@ -1,0 +1,55 @@
+    {
+      "fullUrl": "${ fullUrl }",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "${ id }",
+        "meta": {
+          "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/CareConnect-DCH-Patient-1"
+          ]
+        },
+        "identifier": [
+          {
+            "extension": [
+              {
+                "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1",
+                      "code": " ${ nnn.status.code }",
+                      "display": "${ nnn.status.display }"
+                    }
+                  ]
+                }
+              }
+            ],
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "${ nnn.number }"
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "family": [
+              "${ name.family }"
+            ],
+            "given": [
+			    {% for given in name.givens %}
+					"${ given }"
+			    {% endfor %}
+            ]
+          }
+        ],
+        "gender": "${ gender }",
+        "birthDate": "${ dob.year }-${ dob.day }-${ dob.month }",
+        "_birthDate": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+              "valueDateTime": "${ dob.birthdatetime }"
+            }
+          ]
+        }
+      }
+    }

@@ -1,0 +1,26 @@
+    {
+      "fullUrl": "${ fullURL }",
+      "resource": {
+        "resourceType": "ProcedureRequest",
+        "id": "${ id }",
+        "meta": {
+          "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/DCH-ProcedureRequest-1"
+          ]
+        },
+        "subject": {
+          "reference": "${ subject.reference }",
+          "display": "${ subject.display }"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "${ coding.system }",
+              "code": "${ coding.code }",
+              "display": "${ coding.display }"
+            }
+          ]
+        },
+        "orderedOn": "${ orderedOn }"
+      }
+    }

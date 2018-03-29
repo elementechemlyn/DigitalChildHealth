@@ -1,0 +1,44 @@
+    {
+      "fullUrl": "${ fullUrl }",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "id": "${ id }",
+        "meta": {
+          "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/DCH-MessageHeader-1"
+          ]
+        },
+        "extension": [
+          {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DCH-MessageEventType-1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.nhs.uk/DCH-MessageEventType-1",
+                  "code": "${ eventtype.code }",
+                  "display": "${ eventtype.display }"
+                }
+              ]
+            }
+          }
+        ],
+        "timestamp": "${ timestamp }",
+        "event": {
+          "system": "https://fhir.nhs.uk/DCH-ChildHealthEventType-1",
+          "code": "${ event.code }",
+          "display": "${ event.display }"
+        },
+        "source": {
+          "endpoint": "${ source.endpoint }"
+        },
+        "responsible": {
+          "reference": "${ responsible.reference }",
+          "display": "${ responsible.display }"
+        },
+        "data": [
+          {
+            "reference": "${ data.reference }"
+          }
+        ]
+      }
+    },

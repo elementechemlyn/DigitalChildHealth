@@ -1,0 +1,43 @@
+    {
+      "fullUrl": "${ fullUrl }",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "${ id }",
+        "meta": {
+          "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/DCH-NewbornBloodSpotScreening-DiagnosticReport-1"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "${ identifer.system }",
+            "value": "${ identifer.value }"
+          }
+        ],
+        "status": "${ status }",
+        "code": {
+          "coding": [
+            {
+              "system": "${ code.coding.system }",
+              "code": "${ code.coding.code }",
+              "display": "${ code.coding.display }"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "${ subject.reference }",
+          "display": "${ subject.display }"
+        },
+        "effectiveDateTime": "${ effectiveDateTime }",
+        "issued": "${ issued }",
+        "performer": {
+          "reference": "${ performer.reference }",
+          "display": "${ performer.display }"
+        },
+        "result": [
+          {
+            "reference": "${ result.reference }"
+          }
+        ]
+      }
+    }

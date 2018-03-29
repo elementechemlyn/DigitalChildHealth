@@ -1,0 +1,38 @@
+    {
+      "fullUrl": "${ fulUrl }",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "${ id }",
+        "meta": {
+          "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/CareConnect-DCH-Encounter-1"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "${ identifier.system }",
+            "value": "${ identifer.value }"
+          }
+        ],
+        "status": "${ status }",
+        "patient": {
+          "reference": "${ patient.reference }",
+          "display": "${ patient.display }"
+        },
+        "period": {
+          "start": "${ period.start }"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "${ location.reference }",
+              "display": "${ location.display }"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "${ serviceprovider.reference }",
+          "display": ${ serviceprovider.display }"
+        }
+      }
+    }

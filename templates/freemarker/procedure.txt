@@ -1,0 +1,42 @@
+    {
+      "fullUrl": "${ fullUrl }",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "${ id }",
+        "meta": {
+          "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/CareConnect-DCH-NewbornBloodSpotScreening-Procedure-1"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "${ identifer.system }",
+            "value": "${ identifer.value }"
+          }
+        ],
+        "subject": {
+          "reference": "${ subject.reference }",
+          "display": "${ subject.display }"
+        },
+        "status": "${ status }",
+        "code": {
+          "coding": [
+            {
+              "system": "${ code.coding.system }",
+              "code": "${ code.coding.code }",
+              "display": "${ code.coding.diplay }"
+            }
+          ]
+        },
+        "performedDateTime": "${ performanedDateTime }",
+        "outcome": {
+          "coding": [
+            {
+              "system": "${ outcome.coding.system }",
+              "code": "${ outcome.coding.code }",
+              "display": "${ outcome.coding.display }"
+            }
+          ]
+        }
+      }
+    }

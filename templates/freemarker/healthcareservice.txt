@@ -1,0 +1,39 @@
+    {
+      "fullUrl": "${ fullUrl }",
+      "resource": {
+        "resourceType": "HealthcareService",
+        "id": "${ id }",
+        "meta": {
+          "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/DCH-HealthcareService-1"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "${ identifier.system }",
+            "value": "${ identifier.value }"
+          }
+        ],
+        "providedBy": {
+          "reference": "${ providedby.reference }",
+          "display": "${ providedby.display }"
+        },
+        "serviceType": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.nhs.uk/DCH-ProfessionalType-1",
+                  "code": "${ servicetype.code }",
+                  "display": "${ servicetype.display }"
+                }
+              ]
+            }
+          }
+        ],
+        "location": {
+          "reference": "${ location.reference }",
+          "display": "${ location.display }"
+        }
+      }
+    }
